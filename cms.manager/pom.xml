@@ -10,6 +10,7 @@
   	<module>cms.dao</module>
   	<module>cms.service</module>
   	<module>cms.web</module>
+  	<module>cms.redis</module>
   </modules>
     <!-- 版本管理 -->
   <properties>
