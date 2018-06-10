@@ -108,7 +108,7 @@
 					type : "post",
 					url : _url,
 					data : _data,
-					async : false,
+					/* async : false, */
 					success : function(result){
 						if(result.status == 200){
 							$('#tip').html(result.msg);
