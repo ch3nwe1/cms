@@ -22,14 +22,12 @@
                 <div class="col-md-9">
                     <div class="form-group">
                         <label for="username">用户名：</label>
-                        <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                        <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus"/>
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
                         <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="16"/>
-                    </div>
-                    <div class="form-group">
-                        <h3><span id="tip" class="label label-success"></span></h3>
+                        <span id="tip" class="label label-danger"></span>
                     </div>
                     <div class="form-group">
                         <label class="checkbox">
@@ -71,10 +69,10 @@
 								max : 8,
 								message : '用户名为8位'
 							}, */
-							regexp : {
+							/* regexp : {
 								regexp : '^[0-9]{8}$',
 								message : '用户名为8位数字'
-							}
+							} */
 						}
 					},
 					password : {
