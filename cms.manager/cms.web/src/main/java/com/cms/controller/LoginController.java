@@ -21,13 +21,6 @@ public class LoginController {
 	@Autowired
 	private UserInfoService userInfoService;
 	/*
-	 * 登录页控制
-	 */
-	@RequestMapping("/")
-	private String login(){
-		return "login";
-	}
-	/*
 	 *登录校验  
 	 *?乱码问题待解决?
 	 */

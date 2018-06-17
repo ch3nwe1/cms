@@ -28,7 +28,7 @@ public class UserInfoServiceImpl implements UserInfoService{
 	public boolean getUserByLoginidAndPassword(String loginId, String password) {
 		TbUserInfoExample example = new TbUserInfoExample();
 		Criteria criteria = example.createCriteria();
-		criteria.andLoginidEqualTo(loginId);
+		criteria.andLoginIdEqualTo(loginId);
 		//对密码进行加密后验证
 		password = DigestUtils.md5DigestAsHex(password.getBytes());
 		criteria.andPasswordEqualTo(password);
