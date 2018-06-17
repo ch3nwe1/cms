@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
-                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="16"/>
+                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" value="000000als" maxlength="16"/>
                         <span id="tip" class="label label-danger"></span>
                     </div>
                     <div class="form-group">

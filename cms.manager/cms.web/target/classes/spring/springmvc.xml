@@ -21,7 +21,10 @@
 	  <property name="prefix"><value>/WEB-INF/jsp/</value></property>
 	  <property name="suffix"><value>.jsp</value></property>
 	</bean>
-	
+	<!-- 配置请求和视图名映射 -->
+	<mvc:view-controller path="/jsp/main" view-name="main" />
+	<mvc:view-controller path="/" view-name="login" />
+	<!-- 配置静态资源映射 -->
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"></mvc:resources>
 	<mvc:resources location="/WEB-INF/img/" mapping="/img/**"></mvc:resources>
