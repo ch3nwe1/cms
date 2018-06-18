@@ -16,8 +16,7 @@
     <!-- 注入资源文件 -->
     <mvc:annotation-driven />
     <!-- 配置视图解析器 -->
-	<bean
-	 class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	  <property name="prefix"><value>/WEB-INF/jsp/</value></property>
 	  <property name="suffix"><value>.jsp</value></property>
 	</bean>
