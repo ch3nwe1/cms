@@ -10,18 +10,20 @@ import java.util.List;
  */
 public class Node {
 
-	private String nodeId;//节点编号
+	private String id;//节点编号
 	private String pid;//父节点编号
 	private String text;//节点名称
 	private String icon;//图标
-	private String href;//触发的链接
+	private String href;//触发的链接 此链接会直接在新界面响应,所以会用url做动态链接
+	private String url;//链接
 	private State state;
 	private List<Node> nodes;//子节点
-	public String getNodeId() {
-		return nodeId;
+	
+	public String getId() {
+		return id;
 	}
-	public void setNodeId(String nodeId) {
-		this.nodeId = nodeId;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getPid() {
 		return pid;
@@ -47,6 +49,12 @@ public class Node {
 	public void setHref(String href) {
 		this.href = href;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	public State getState() {
 		return state;
 	}
@@ -63,15 +71,15 @@ public class Node {
 	public Node(){
 		//this.nodes = new ArrayList<>();
 	}
-	public Node(String nodeId, String pid) {
+	public Node(String id, String pid) {
 		super();
-		this.nodeId = nodeId;
+		this.id = id;
 		this.pid = pid;
 		//this.nodes = new ArrayList<>();
 	}
-	public Node(String nodeId, String pid, String text, String icon, String href, State state) {
+	public Node(String id, String pid, String text, String icon, String href, State state) {
 		super();
-		this.nodeId = nodeId;
+		this.id = id;
 		this.pid = pid;
 		this.text = text;
 		this.icon = icon;
@@ -108,7 +116,7 @@ public class Node {
 			
 			if(node2 == null) return;
 			//首先判断有无子节点
-			if(node2.getNodeId().equals(child.getPid())){
+			if(node2.getId().equals(child.getPid())){
 				if(node2.getNodes() == null){
 					node2.setNodes(new ArrayList<Node>());
 				}
@@ -118,7 +126,7 @@ public class Node {
 			//如果当前节点没有子节点则退出
 			if(node2.getNodes() == null) return;
 			for(Node item : node2.getNodes()){//遍历子节点
-				if(item.getNodeId().equals(child.getPid())){//找到子节点对应的父节点，并添加进去
+				if(item.getId().equals(child.getPid())){//找到子节点对应的父节点，并添加进去
 					if(item.getNodes() == null){
 						item.setNodes(new ArrayList<Node>());
 					}
@@ -135,7 +143,7 @@ public class Node {
 	
 	@Override
 	public String toString() {
-		return "Node [nodeId=" + nodeId + ", pid=" + pid + ", text=" + text + ", icon=" + icon + ", href=" + href
+		return "Node [nodeId=" + id + ", pid=" + pid + ", text=" + text + ", icon=" + icon + ", href=" + href
 				+ ", nodes=" + nodes + "]";
 	}
 	
