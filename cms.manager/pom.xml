@@ -12,6 +12,7 @@
   	<module>cms.web</module>
   </modules>
     <!-- 版本管理 -->
+	<!--git测试-->
   <properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
